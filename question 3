@@ -1,0 +1,23 @@
+print ("number of rows in Pascal's triangle" )
+n=int(input ())
+print ()
+dict_={}
+for i in range (1,n+1):
+  col={}
+  for j in range (1,2*n+1):
+     if j>= (n+1-i) and j<=(n+i-1) and (i+n+1+j)%2==0 :
+        if j==n+1-i or j==n+i-1:
+           col. update ({j:1})
+           print ("1",end=""  )
+           
+        else:
+           a= dict_[i-1][j-1]+ dict_[i-1][j+1]
+           col.update ({j:a})
+           print (f"{col [j] }",end=""  )
+          
+          
+     else:
+      # col. update ({j:0})
+       print (" ",end="" )
+  dict_.update({i:col})
+  print ()
