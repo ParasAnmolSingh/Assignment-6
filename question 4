@@ -1,0 +1,16 @@
+print ("enter a sentence" )
+snt=input ()
+snt=snt. upper ()
+print ()
+count=1
+i=65
+
+while i<91 :
+  if chr(i) not in snt:
+    count=0
+    break
+  i+=1
+if count==1:
+  print ("yes! the given sentence is a pangram" )
+else:
+   print ("No the given sentence isn't a pangram")
